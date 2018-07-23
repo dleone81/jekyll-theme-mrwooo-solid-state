@@ -3,8 +3,8 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-mrwooo-solid-state"
   spec.version       = "0.1.0"
-  spec.authors       = ["Domenico Leone"]
-  spec.email         = ["domenico.leone@gmail.com"]
+  spec.authors       = ["MrWooo"]
+  spec.email         = ["hello@mrwooo.com"]
 
   spec.summary       = "HTML5Up Solid state theme packaged by MrWooo for Jekyllrb"
   spec.homepage      = "https://www.mrwooo.com/jekyllrb/themes/solid-state"
