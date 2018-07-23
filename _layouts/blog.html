@@ -1,0 +1,64 @@
+---
+layout: blog
+version: 0.1.0
+---
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	{% include head.html %}
+	<body class="is-preload">
+			{% if gtagmanager %}
+
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','{{ gtagmanager }}');
+		
+			{% endif%}
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				{% include header.html %}
+
+				<!-- Menu -->
+				{% include menu.html %}
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>{{ page.title }}</h2>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section class="features">
+										<!-- Feed -->
+										{% include feed.html %}
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				{% include footer.html %}
+
+			</div>
+
+		<!-- Scripts -->
+		{% include bottomScripts.html %}
+
+	</body>
+</html>

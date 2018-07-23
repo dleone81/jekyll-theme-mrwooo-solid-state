@@ -1,0 +1,77 @@
+<section id="footer">
+    <div class="inner">
+        <h2 class="major">Get in touch</h2>
+        <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+        <form method="post" action="#">
+            <div class="fields">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4"></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" /></li>
+            </ul>
+        </form>
+        <ul class="contact">
+            {% if site.address %}
+            <li class="fa-home">
+                {{ site.address }}
+            </li>
+            {% endif %}
+
+            {% if site.phone %}
+            <li class="fa-phone">{{ site.phone }}</li>
+            {% endif %}
+
+            {% if site.email %}
+            <li class="fa-envelope"><a href="#">{{ site.email }}</a></li>
+            {% endif %}
+
+            {% if site.twitter %}
+            <li class="fa-twitter"><a href="#">{{ site.twitter }}</a></li>
+            {% endif %}
+
+            {% if site.facebook %}
+            <li class="fa-facebook"><a href="#">{{ site.facebook }}</a></li>
+            {% endif %}
+
+            {% if site.instagram %}
+            <li class="fa-instagram"><a href="#">{{ site.instagram }}</a></li>
+            {% endif %}
+
+            {% if site.linkedin %}
+            <li class="fa-linkedin"><a href="#">{{ site.linkedin }}</a></li>
+            {% endif %}
+
+            {% if site.youtube %}
+            <li class="fa-youtube"><a href="#">{{ site.youtube }}</a></li>
+            {% endif %}
+
+            {% if site.googleplus %}
+            <li class="fa-google-plus"><a href="#">{{ site.googleplus }}</a></li>
+            {% endif %}
+
+            {% if site.github %}
+            <li class="fa-github"><a href="#">{{ site.github }}</a></li>
+            {% endif %}
+
+            {% if site.dribble %}
+            <li class="fa-dribbble"><a href="#">{{ site.dribbble }}</a></li>
+            {% endif %}
+        </ul>
+        <ul class="copyright">
+            <li>&copy; {{ site.owner }}. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Packaged by: <a href="https://www.mrwooo.com/jekyll/themes/solid-state">MrWooo</a></li>
+        </ul>
+    </div>
+</section>

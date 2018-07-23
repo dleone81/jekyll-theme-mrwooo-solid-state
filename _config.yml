@@ -1,0 +1,46 @@
+title: Solid state
+short_description: This is Solid State
+description: >- # this means to ignore newlines until "baseurl:"
+  Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a>
+baseurl: "/"
+
+# google services
+ganalytics:
+gtagmanager:
+gmapsapikey:
+
+# facebook
+fpixel:
+
+# collections
+collections:
+  main:
+    output: true
+    permalink: /main/:name
+
+  defaults:
+  - scope:
+      path: 'assets/images'
+      type: 'main'
+  values:
+    image: true
+
+# contacts
+address: >-
+  Untitled Inc  1234<br />Somewhere Road Suite 2894  Nashville,<br />TN 00000-0000
+phone: (000) 000-0000
+email: information@untitled.tld
+  
+# social
+twitter: twitter.com/untitled-tld
+facebook: facebook.com/untitled-tld
+instagram: instagram.com/untitled-tld
+linkedin: linkedin.com/untitled-tld
+youtube: youtube.com/untitled-tld
+googleplus: googleplus.com/untitled-tld
+github: github.com/untitled-tld
+dribbble: dribbble.com/untitled-tld
+
+# copyright
+owner: Company
+version: 0.0.1

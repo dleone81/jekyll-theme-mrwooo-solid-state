@@ -1,0 +1,101 @@
+---
+layout: home
+version: 0.1.0
+---
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    {% include head.html %}
+    <body class="is-preload">
+			{% if gtagmanager %}
+
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','{{ gtagmanager }}');
+		
+			{% endif%}
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				{% include header.html %}
+
+				<!-- Menu -->
+				{% include menu.html %}		
+				
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<h2>{{ site.short_description }}</h2>
+							<p>{{ site.description }}</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+							{% for collection in site.collections %}
+
+							{% assign name = collection.label %}
+								{% if name == 'main' %}
+									{% for page in site[name] %}
+										{% capture i %}
+											{% increment index %}
+										{% endcapture %}
+										
+										{% capture _i %}{% cycle 'odd', 'even' %}{% endcapture %}
+										
+										<section class="wrapper {% if _i == 'even' %} alt {% endif %} spotlight style{{index}}">
+											<div class="inner">
+												<a href="{{ page.url }}" class="image"><img src="{{ page.image }}" alt="" /></a>
+												<div class="content">
+													<h2 class="major">{{page.title}}</h2>
+													<p>{{page.description}}</p>
+													<a href="{{ page.url }}" class="special">Learn more</a>
+												</div>
+											</div>
+										</section>
+
+
+									{% endfor %}
+								{% endif %}
+						  {% endfor %}
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Vitae phasellus</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<section class="features">
+									
+										<!-- blog feed -->
+										{% include feed.html %}
+
+									</section>
+
+									<ul class="actions">
+										<li><a href="{{ "/blog/" | prepend: site.url }}" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+                <!-- Footer -->
+                {% include footer.html %}
+                
+			</div>
+
+		<!-- Scripts -->
+		{% include bottomScripts.html %}
+
+	</body>
+</html>

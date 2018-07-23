@@ -1,0 +1,9 @@
+<script src="{{ "/assets/js/jquery.min.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/jquery.scrollex.min.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/browser.min.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/breakpoints.min.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/util.js" | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/main.js" | prepend: site.url }}"></script>
+{% if gmapsapikey %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ gmapsapikey }}&callback=initMap" async defer></script>
+{% endif %}

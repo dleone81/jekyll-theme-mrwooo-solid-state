@@ -1,0 +1,11 @@
+# menu
+main_menu: Menu
+link:
+- title: Home
+  url: index.html
+
+- title: Generic
+  url: generic.html
+
+- title: Elements
+  url: elements.html
