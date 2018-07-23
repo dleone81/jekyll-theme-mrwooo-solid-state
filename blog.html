@@ -1,6 +1,7 @@
 ---
 layout: post
-version: 0.1.3
+title: My blog
+permalink: /blog/
 ---
 <!DOCTYPE HTML>
 <!--
@@ -34,22 +35,13 @@ version: 0.1.3
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-                                <h2>{{ page.title }}</h2>
-                                <blockquote>{{ page.excerpt }}</blockquote>
+								<h2>{{ page.title }}</h2>
 							</div>
 						</header>
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
-
-                                    <section>
-                                        <p>{% if page.image %}<span class="image left"><img src="{{ page.image }}" alt=""></span>{% endif %}{{ page.content }}</p>
-                                        <p>{% if page.author %}Posted by {{ page.author }}{% endif %}{% if page.date %} at {{ page.date }}{% endif %}</p>
-                                    </section>
-                                    
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 
 									<section class="features">
 										<!-- Feed -->

@@ -1,4 +1,4 @@
-# jekyll-theme-mrwooo-solid-state
+# Jekill theme MrWooo Solid State
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
@@ -6,11 +6,13 @@ To experiment with this code, add some sample content and run `bundle exec jekyl
 
 This gem is a package of HTML5up.net/solid-state theme for Jekyll.
 I've added new features ready to use as:
+
 * Google Analytics script
 * Google Tag Manager script
 * Google Maps API Key script
 * Open Graph support (all)
 * Social Icons
+* Menu support as native theme
 
 ## Installation
 
@@ -82,7 +84,45 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+### Add menu
+
+Menu is provided using collection feature.
+
+To add menu as Solid state theme follow these steps:
+1. create folder _data in root folder project
+1. create in _data folder menu.yml as below. If you'd like to add more item to menu add them to menu.yml file and create page in _main folder
+1. create _main folder
+1. create in _menu folder three different file like sample-1.md as below
+
+```
+# menu.yml file
+main_menu: Menu
+link:
+- title: Home
+  url: index.html
+
+- title: Generic
+  url: generic.html
+
+- title: Elements
+  url: elements.html
+```
+
+```
+---
+layout: page
+title: Tempus adipiscing
+description: Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
+permalink: /wordpress/plugins/
+image: /assets/images/pic02.jpg
+---
+Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
+```
+
+And then execute:
+    $ bundle exec jekyll serve
+  
+done!
 
 ## Contributing
 
