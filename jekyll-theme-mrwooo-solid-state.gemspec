@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-mrwooo-solid-state"
-  spec.version       = "0.1.3"
+  spec.version       = "0.1.9"
   spec.authors       = ["MrWooo"]
   spec.email         = ["hello@mrwooo.com"]
 
@@ -10,9 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://www.mrwooo.com/jekyllrb/themes/solid-state"
   spec.license       = "MIT"
 
-  spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(assets|_(layouts|includes|sass|posts)/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
-  end
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|posts|LICENSE|README)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.8"
 

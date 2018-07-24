@@ -2,7 +2,7 @@ title: Solid state
 short_description: This is Solid State
 description: >- # this means to ignore newlines until "baseurl:"
   Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a>
-baseurl: "/"
+baseurl: ""
 
 # google services
 ganalytics:
