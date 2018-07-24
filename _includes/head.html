@@ -1,23 +1,23 @@
 <head>
     <title>{{ page.title }} | {{ site.title }}</title>
 
-    {% if ganalytics %}
+    {% if site.ganalytics %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ganalytics }}"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', '{{ ganalytics }}');
-    </script>
+            gtag('config', '{{ ganalytics }}');
+        </script>
     {% endif %}
 
-    {% if gtagmanager %}
+    {% if site.gtagmanager %}
     <script async="" src="https://www.googletagmanager.com/gtm.js?id={{ gtagmanager }}"></script>
     {% endif %}
 
-    {% if fpixel %}
+    {% if site.fpixel %}
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -44,65 +44,65 @@
     <meta description="{{ page.description }}" />
 
     <!-- open graph -->
-    {% if og-title %}<meta property="og:title" content="{{ page.og-title }}" />{% endif %}
-    {% if og-type %}<meta property="og:type" content="{{ page.og-type }}" />{% endif %}  
-    {% if og-image %}<meta property="og:image" content="{{ page.og-image }}"/>{% endif %}
-    {% if og-image-url %}<meta property="og:image:url" content="{{ page.og-image-url }}"/>{% endif %}
-    {% if og-image-secure_url %}<meta property="og:image:secure_url" content="{{ page.og-image-secure-url }}"/>{% endif %}
-    {% if og-image-type %}<meta property="og:image:type" content="{{ page.og-image-type }}"/>{% endif %}
-    {% if og-image-width %}<meta property="og:image:width" content="{{ page.og-image-width }}"/>{% endif %}
-    {% if og-image-height %}<meta property="og:image:height" content="{{ page.og-image-height }}"/>{% endif %}
-    {% if og-image-alt %}<meta property="og:image:alt" content="{{ page.og-image-alt }}"/>{% endif %}
+    {% if page.og-title %}<meta property="og:title" content="{{ page.og-title }}" />{% endif %}
+    {% if page.og-type %}<meta property="og:type" content="{{ page.og-type }}" />{% endif %}  
+    {% if page.og-image %}<meta property="og:image" content="{{ page.og-image }}"/>{% endif %}
+    {% if page.og-image-url %}<meta property="og:image:url" content="{{ page.og-image-url }}"/>{% endif %}
+    {% if page.og-image-secure_url %}<meta property="og:image:secure_url" content="{{ page.og-image-secure-url }}"/>{% endif %}
+    {% if page.og-image-type %}<meta property="og:image:type" content="{{ page.og-image-type }}"/>{% endif %}
+    {% if page.og-image-width %}<meta property="og:image:width" content="{{ page.og-image-width }}"/>{% endif %}
+    {% if page.og-image-height %}<meta property="og:image:height" content="{{ page.og-image-height }}"/>{% endif %}
+    {% if page.og-image-alt %}<meta property="og:image:alt" content="{{ page.og-image-alt }}"/>{% endif %}
     <meta property="og:url" content="{{ site.baseurl }}{{ page.permalink }}"/>
-    {% if og-audio %}<meta property="og:audio" content="{{ page.og-audio }}"/>{% endif %}
-    {% if og-audio-secure-url %}<meta property="og:audio:secure_url" content="{{ page.og-audio-secure-url }}"/>{% endif %}
-    {% if og-audio-type %}<meta property="og:audio:type" content="{{ page.og-audio-type }}"/>{% endif %}
-    {% if og-description %}<meta property="og:description" content="{{ page.og-description }}"/>{% endif %}
-    {% if og-determiner %}<meta property="og:determiner" content="{{ page.og-determiner }}"/>{% endif %}
-    {% if og-locale %}<meta property="og:locale" content="{{ page.og-locale }}"/>{% endif %}
-    {% if og-locale-alternate %}<meta property="og:locale:alternate" content="{{ page.og-locale-alternate }}"/>{% endif %}
-    {% if og-site-name %}<meta property="og:site_name" content="{{ page.og-site-name }}"/>{% endif %}
-    {% if og-video %}<meta property="og:video" content="{{ page.og-video }}"/>{% endif %}
-    {% if og-video-actor %}<meta property="og:video:actor" content="{{ page.og-video-actor }}"/>{% endif %}
-    {% if og-video-actor-role %}<meta property="og:video:actor:role" content="{{ page.og-video-actor-role }}"/>{% endif %}
-    {% if og-video-director %}<meta property="og:video:director" content="{{ page.og-video-director }}"/>{% endif %}
-    {% if og-video-writer %}<meta property="og:video:writer" content="{{ page.og-video-writer }}"/>{% endif %}
-    {% if og-video-duration %}<meta property="og:video:duration" content="{{ page.og-video-duration }}"/>{% endif %}
-    {% if og-video-release-date %}<meta property="og:video:release_date" content="{{ page.og-video-release-date }}"/>{% endif %}
-    {% if og-video-tag %}<meta property="og:video:tag" content="{{ page.og-video-tag }}"/>{% endif %}
-    {% if og-video-series %}<meta property="og:video:series" content="{{ page.og-video-series }}"/>{% endif %}
-    {% if og-video-secure-url %}<meta property="og:video:secure-url" content="{{ page.og-video-secure-url }}"/>{% endif %}
-    {% if og-video-width %}<meta property="og:video:width" content="{{ page.og-video-width }}"/>{% endif %}
-    {% if og-video-height %}<meta property="og:video:height" content="{{ page.og-video-height }}"/>{% endif %}
-    {% if og-music %}<meta property="og:music" content="{{ page.og-music }}"/>{% endif %}
-    {% if og-music-duration %}<meta property="og:music:duration" content="{{ page.og-music-duration }}"/>{% endif %}
-    {% if og-music-album %}<meta property="og:music:album" content="{{ page.og-music-album }}"/>{% endif %}
-    {% if og-music-album-disk %}<meta property="og:music:album:disk" content="{{ page.og-music-album-disk }}"/>{% endif %}
-    {% if og-music-album-track %}<meta property="og:music:album:track" content="{{ page.og-music-album-track }}"/>{% endif %}
-    {% if og-music-album-musician %}<meta property="og:music:album:musician" content="{{ page.og-music-album-musician }}"/>{% endif %}
-    {% if og-music-song %}<meta property="og:music:song" content="{{ page.og-music-song }}"/>{% endif %}
-    {% if og-music-song-disc %}<meta property="og:music:song:disc" content="{{ page.og-music-song-disc }}"/>{% endif %}
-    {% if og-music-song-track %}<meta property="og:music:song:track" content="{{ page.og-music-song-track }}"/>{% endif %}
-    {% if og-music-musician %}<meta property="og:music:musician" content="{{ page.og-music-musician }}"/>{% endif %}
-    {% if og-music-creator %}<meta property="og:music:creator" content="{{ page.og-music-creator }}"/>{% endif %}
-    {% if og-music-release-date %}<meta property="og:music:release_date" content="{{ page.og-music-release-date }}"/>{% endif %}
-    {% if og-article %}<meta property="og:article" content="{{ page.og-article }}"/>{% endif %}
-    {% if og-article-published-time %}<meta property="og:article:published_time" content="{{ page.og-article-published-time }}"/>{% endif %}
-    {% if og-article-modified-time %}<meta property="og:article:modified_time" content="{{ page.og-article-modified-time }}"/>{% endif %}
-    {% if og-article-expiration-time %}<meta property="og:article:expiration_time" content="{{ page.og-article-expiration-time }}"/>{% endif %}
-    {% if og-article-author %}<meta property="og:article:author" content="{{ page.og-article-author }}"/>{% endif %}
-    {% if og-article-section %}<meta property="og:article:section" content="{{ page.og-article-section }}"/>{% endif %}
-    {% if og-article-tag %}<meta property="og:article:tag" content="{{ page.og-article-tag }}"/>{% endif %}
-    {% if og-book %}<meta property="og:book" content="{{ page.og-book }}"/>{% endif %}
-    {% if og-book-author %}<meta property="og:book:author" content="{{ page.og-book-author }}"/>{% endif %}
-    {% if og-book-isbn %}<meta property="og:book:isbn" content="{{ page.og-book-isbn }}"/>{% endif %}
-    {% if og-book-release-date %}<meta property="og:book:release_date" content="{{ page.og-book-release-date }}"/>{% endif %}
-    {% if og-book-tag %}<meta property="og:book:tag" content="{{ page.og-book-tag }}"/>{% endif %}
-    {% if og-profile-first-name %}<meta property="og:profile:first_name" content="{{ page.og-profile-first-name }}"/>{% endif %}
-    {% if og-profile-last-name %}<meta property="og:profile:last_name" content="{{ page.og-profile-last-name }}"/>{% endif %}
-    {% if og-profile-username %}<meta property="og:profile:username" content="{{ page.og-profile-username }}"/>{% endif %}
-    {% if og-profile-gender %}<meta property="og:profile:gender" content="{{ page.og-profile-gender }}"/>{% endif %}
-    {% if og-website %}<meta property="og:website" content="{{ page.og-website }}"/>{% endif %}
+    {% if page.og-audio %}<meta property="og:audio" content="{{ page.og-audio }}"/>{% endif %}
+    {% if page.og-audio-secure-url %}<meta property="og:audio:secure_url" content="{{ page.og-audio-secure-url }}"/>{% endif %}
+    {% if page.og-audio-type %}<meta property="og:audio:type" content="{{ page.og-audio-type }}"/>{% endif %}
+    {% if page.og-description %}<meta property="og:description" content="{{ page.og-description }}"/>{% endif %}
+    {% if page.og-determiner %}<meta property="og:determiner" content="{{ page.og-determiner }}"/>{% endif %}
+    {% if page.og-locale %}<meta property="og:locale" content="{{ page.og-locale }}"/>{% endif %}
+    {% if page.og-locale-alternate %}<meta property="og:locale:alternate" content="{{ page.og-locale-alternate }}"/>{% endif %}
+    {% if page.og-site-name %}<meta property="og:site_name" content="{{ page.og-site-name }}"/>{% endif %}
+    {% if page.og-video %}<meta property="og:video" content="{{ page.og-video }}"/>{% endif %}
+    {% if page.og-video-actor %}<meta property="og:video:actor" content="{{ page.og-video-actor }}"/>{% endif %}
+    {% if page.og-video-actor-role %}<meta property="og:video:actor:role" content="{{ page.og-video-actor-role }}"/>{% endif %}
+    {% if page.og-video-director %}<meta property="og:video:director" content="{{ page.og-video-director }}"/>{% endif %}
+    {% if page.og-video-writer %}<meta property="og:video:writer" content="{{ page.og-video-writer }}"/>{% endif %}
+    {% if page.og-video-duration %}<meta property="og:video:duration" content="{{ page.og-video-duration }}"/>{% endif %}
+    {% if page.og-video-release-date %}<meta property="og:video:release_date" content="{{ page.og-video-release-date }}"/>{% endif %}
+    {% if page.og-video-tag %}<meta property="og:video:tag" content="{{ page.og-video-tag }}"/>{% endif %}
+    {% if page.og-video-series %}<meta property="og:video:series" content="{{ page.og-video-series }}"/>{% endif %}
+    {% if page.og-video-secure-url %}<meta property="og:video:secure-url" content="{{ page.og-video-secure-url }}"/>{% endif %}
+    {% if page.og-video-width %}<meta property="og:video:width" content="{{ page.og-video-width }}"/>{% endif %}
+    {% if page.og-video-height %}<meta property="og:video:height" content="{{ page.og-video-height }}"/>{% endif %}
+    {% if page.og-music %}<meta property="og:music" content="{{ page.og-music }}"/>{% endif %}
+    {% if page.og-music-duration %}<meta property="og:music:duration" content="{{ page.og-music-duration }}"/>{% endif %}
+    {% if page.og-music-album %}<meta property="og:music:album" content="{{ page.og-music-album }}"/>{% endif %}
+    {% if page.og-music-album-disk %}<meta property="og:music:album:disk" content="{{ page.og-music-album-disk }}"/>{% endif %}
+    {% if page.og-music-album-track %}<meta property="og:music:album:track" content="{{ page.og-music-album-track }}"/>{% endif %}
+    {% if page.og-music-album-musician %}<meta property="og:music:album:musician" content="{{ page.og-music-album-musician }}"/>{% endif %}
+    {% if page.og-music-song %}<meta property="og:music:song" content="{{ page.og-music-song }}"/>{% endif %}
+    {% if page.og-music-song-disc %}<meta property="og:music:song:disc" content="{{ page.og-music-song-disc }}"/>{% endif %}
+    {% if page.og-music-song-track %}<meta property="og:music:song:track" content="{{ page.og-music-song-track }}"/>{% endif %}
+    {% if page.og-music-musician %}<meta property="og:music:musician" content="{{ page.og-music-musician }}"/>{% endif %}
+    {% if page.og-music-creator %}<meta property="og:music:creator" content="{{ page.og-music-creator }}"/>{% endif %}
+    {% if page.og-music-release-date %}<meta property="og:music:release_date" content="{{ page.og-music-release-date }}"/>{% endif %}
+    {% if page.og-article %}<meta property="og:article" content="{{ page.og-article }}"/>{% endif %}
+    {% if page.og-article-published-time %}<meta property="og:article:published_time" content="{{ page.og-article-published-time }}"/>{% endif %}
+    {% if page.og-article-modified-time %}<meta property="og:article:modified_time" content="{{ page.og-article-modified-time }}"/>{% endif %}
+    {% if page.og-article-expiration-time %}<meta property="og:article:expiration_time" content="{{ page.og-article-expiration-time }}"/>{% endif %}
+    {% if page.og-article-author %}<meta property="og:article:author" content="{{ page.og-article-author }}"/>{% endif %}
+    {% if page.og-article-section %}<meta property="og:article:section" content="{{ page.og-article-section }}"/>{% endif %}
+    {% if page.og-article-tag %}<meta property="og:article:tag" content="{{ page.og-article-tag }}"/>{% endif %}
+    {% if page.og-book %}<meta property="og:book" content="{{ page.og-book }}"/>{% endif %}
+    {% if page.og-book-author %}<meta property="og:book:author" content="{{ page.og-book-author }}"/>{% endif %}
+    {% if page.og-book-isbn %}<meta property="og:book:isbn" content="{{ page.og-book-isbn }}"/>{% endif %}
+    {% if page.og-book-release-date %}<meta property="og:book:release_date" content="{{ page.og-book-release-date }}"/>{% endif %}
+    {% if page.og-book-tag %}<meta property="og:book:tag" content="{{ page.og-book-tag }}"/>{% endif %}
+    {% if page.og-profile-first-name %}<meta property="og:profile:first_name" content="{{ page.og-profile-first-name }}"/>{% endif %}
+    {% if page.og-profile-last-name %}<meta property="og:profile:last_name" content="{{ page.og-profile-last-name }}"/>{% endif %}
+    {% if page.og-profile-username %}<meta property="og:profile:username" content="{{ page.og-profile-username }}"/>{% endif %}
+    {% if page.og-profile-gender %}<meta property="og:profile:gender" content="{{ page.og-profile-gender }}"/>{% endif %}
+    {% if page.og-website %}<meta property="og:website" content="{{ page.og-website }}"/>{% endif %}
 
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}" />
     <noscript><link rel="stylesheet" href="{{ "/assets/css/noscript.css" | prepend: site.url }}" /></noscript>
