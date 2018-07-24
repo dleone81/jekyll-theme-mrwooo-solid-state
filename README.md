@@ -120,8 +120,11 @@ Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nulla
 ```
 
 And then execute:
+
+```
     $ bundle exec jekyll serve
-  
+```
+
 done!
 
 ## Contributing
