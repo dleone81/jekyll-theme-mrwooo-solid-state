@@ -1,11 +1,11 @@
-title: Solid state
+title: MrWooo
 short_description: This is Solid State
 description: >- # this means to ignore newlines until "baseurl:"
-  Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a>
+  Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a> and packaged for Jekyll by <a href="https://www.mrwooo.com">MrWooo</a>
 baseurl: ""
 
 # google services
-ganalytics:
+ganalytics: UA-122812748-2
 gtagmanager:
 gmapsapikey:
 
@@ -26,20 +26,19 @@ collections:
     image: true
 
 # contacts
-address: >-
-  Untitled Inc  1234<br />Somewhere Road Suite 2894  Nashville,<br />TN 00000-0000
-phone: (000) 000-0000
-email: information@untitled.tld
+address:
+phone:
+email: hello@mrwooo.com
   
 # social
-twitter: twitter.com/untitled-tld
-facebook: facebook.com/untitled-tld
-instagram: instagram.com/untitled-tld
-linkedin: linkedin.com/untitled-tld
-youtube: youtube.com/untitled-tld
-googleplus: googleplus.com/untitled-tld
-github: github.com/untitled-tld
-dribbble: dribbble.com/untitled-tld
+twitter:
+facebook:
+instagram:
+linkedin:
+youtube:
+googleplus:
+github: https://github.com/dleone81
+dribbble:
 
 # copyright
-owner: Company
+owner: MrWooo.com
