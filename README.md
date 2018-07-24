@@ -1,4 +1,5 @@
 # Jekill Theme MrWooo Solid State
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-mrwooo-solid-state.svg)](https://badge.fury.io/rb/jekyll-theme-mrwooo-solid-state)
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
