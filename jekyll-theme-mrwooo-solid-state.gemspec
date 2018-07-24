@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-mrwooo-solid-state"
-  spec.version       = "0.1.9"
+  spec.version       = "0.1.91"
   spec.authors       = ["MrWooo"]
   spec.email         = ["hello@mrwooo.com"]
 

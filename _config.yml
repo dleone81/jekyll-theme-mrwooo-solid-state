@@ -2,7 +2,7 @@ title: MrWooo
 short_description: This is Solid State
 description: >- # this means to ignore newlines until "baseurl:"
   Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a> and packaged for Jekyll by <a href="https://www.mrwooo.com">MrWooo</a>
-baseurl: ""
+baseurl: "/"
 
 # google services
 ganalytics: UA-122812748-2
