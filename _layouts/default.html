@@ -38,34 +38,26 @@
 				<!-- Wrapper -->
 					<section id="wrapper">
 
-							{{ content }}
+						{{ content }}
 
-							{% for collection in site.collections %}
+						{% for item in site.main %}
+									
+						{% capture i %}{% increment index %}{% endcapture %}
+						{% capture _i %}{% cycle 'odd', 'even' %}{% endcapture %}
+						{% assign index = forloop.index %}
 
-							{% assign name = collection.label %}
-								{% if name == 'main' %}
-									{% for page in site[name] %}
-										{% capture i %}
-											{% increment index %}
-										{% endcapture %}
-										
-										{% capture _i %}{% cycle 'odd', 'even' %}{% endcapture %}
-										
-										<section class="wrapper {% if _i == 'even' %} alt {% endif %} spotlight style{{index}}">
-											<div class="inner">
-												<a href="{{ page.url }}" class="image"><img src="{{ page.image }}" alt="" /></a>
-												<div class="content">
-													<h2 class="major">{{page.title}}</h2>
-													<p>{{page.description}}</p>
-													<a href="{{ page.url }}" class="special">Learn more</a>
-												</div>
-											</div>
-										</section>
+							<section class="wrapper {% if _i == 'even' %} alt {% endif %} spotlight style{{ index }}">
+								<div class="inner">
+									<a href="{{ item.url }}" class="image"><img src="{{ item.image }}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">{{item.title}}</h2>
+										<p>{{item.description}}</p>
+										<a href="{{ item.url }}" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
 
-
-									{% endfor %}
-								{% endif %}
-						  {% endfor %}
+						{% endfor %}
 
 						<!-- Four -->
 							<section id="four" class="wrapper alt style1">
