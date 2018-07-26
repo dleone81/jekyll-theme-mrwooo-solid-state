@@ -23,53 +23,55 @@
         </form>
         <ul class="contact">
             {% if site.address %}
-            <li class="fa-home">{{ site.address }}</li>
+            <li class="fa-home"><a href="{{ site.address }}">{{ site.address }}</a></li>
             {% endif %}
 
+            <!--    tel:
+                    ref: https://tools.ietf.org/html/rfc3966 -->
             {% if site.phone %}
-            <li class="fa-phone">{{ site.phone }}</li>
+            <li class="fa-phone"><a href="{{ site.phone | prepend: "tel:" }}">{{ site.phone }}</a></li>
             {% endif %}
 
             {% if site.email %}
-            <li class="fa-envelope"><a href="#">{{ site.email }}</a></li>
+            <li class="fa-envelope"><a href="{{ site.email | prepend: "mailto:"}}">{{ site.email }}</a></li>
             {% endif %}
 
             {% if site.twitter %}
-            <li class="fa-twitter"><a href="#">{{ site.twitter }}</a></li>
+            <li class="fa-twitter"><a href="{{ site.twitter | replace: "https://", "" | prepend: "https://" }}">{{ site.twitter }}</a></li>
             {% endif %}
 
             {% if site.facebook %}
-            <li class="fa-facebook"><a href="#">{{ site.facebook }}</a></li>
+            <li class="fa-facebook"><a href="{{ site.facebook | replace: "https://", "" | prepend: "https://" }}">{{ site.facebook }}</a></li>
             {% endif %}
 
             {% if site.instagram %}
-            <li class="fa-instagram"><a href="#">{{ site.instagram }}</a></li>
+            <li class="fa-instagram"><a href="{{ site.instagram | replace: "https://", "" | prepend: "https://" }}">{{ site.instagram }}</a></li>
             {% endif %}
 
             {% if site.linkedin %}
-            <li class="fa-linkedin"><a href="#">{{ site.linkedin }}</a></li>
+            <li class="fa-linkedin"><a href="{{ site.instagram | replace: "https://", "" | prepend: "https://" }}">{{ site.instagram }}</a></li>
             {% endif %}
 
             {% if site.youtube %}
-            <li class="fa-youtube"><a href="#">{{ site.youtube }}</a></li>
+            <li class="fa-youtube"><a href="{{ site.youtube | replace: "https://", "" | prepend: "https://" }}">{{ site.youtube }}</a></li>
             {% endif %}
 
             {% if site.googleplus %}
-            <li class="fa-google-plus"><a href="#">{{ site.googleplus }}</a></li>
+            <li class="fa-google-plus"><a href="{{ site.googleplus | replace: "https://", "" | prepend: "https://" }}">{{ site.googleplus }}</a></li>
             {% endif %}
 
             {% if site.github %}
-            <li class="fa-github"><a href="#">{{ site.github }}</a></li>
+            <li class="fa-github"><a href="{{ site.github | replace: "https://", "" | prepend: "https://" }}">{{ site.github }}</a></li>
             {% endif %}
 
             {% if site.dribble %}
-            <li class="fa-dribbble"><a href="#">{{ site.dribbble }}</a></li>
+            <li class="fa-dribbble"><a href="{{ site.dribbble | replace: "https://", "" | prepend: "https://"}} ">{{ site.dribbble }}</a></li>
             {% endif %}
         </ul>
         <ul class="copyright">
             <li>&copy; {{ site.owner }}. All rights reserved.</li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            <li>Packaged by: <a href="https://www.mrwooo.com/jekyll/themes/solid-state">MrWooo</a></li>
+            <li>Packaged by: <a href="https://www.mrwooo.com/jekyllrb/themes/solid-state">MrWooo</a></li>
         </ul>
     </div>
 </section>
